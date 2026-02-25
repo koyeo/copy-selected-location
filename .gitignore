@@ -1,0 +1,52 @@
+# === Agent Config ===
+.agent/*
+!.agent/skills
+!.agent/rules
+!.agent/workflows
+
+# === Dependencies ===
+node_modules/
+
+# === Build outputs ===
+dist/
+out/
+*.vsix
+
+# === Next.js ===
+.next/
+.vercel/
+
+# === TypeScript ===
+*.tsbuildinfo
+
+# === Environment ===
+.env
+.env.local
+.env.*.local
+
+# === IDE ===
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+*.swp
+*.swo
+*~
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Logs ===
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# === Testing ===
+coverage/
+
+# === Chat History ===
+.chat/
+
+# === Misc ===
+*.tgz

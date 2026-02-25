@@ -1,0 +1,49 @@
+{
+    "name": "copy-selected-location",
+    "publisher": "kozilla",
+    "displayName": "Copy Selected Location",
+    "description": "Right-click to copy file relative path and selected text",
+    "version": "1.0.1",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.96.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "copySelectedLocation.copy",
+                "title": "Copy Selected Location"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "copySelectedLocation.copy",
+                    "when": "editorHasSelection",
+                    "group": "9_cutcopypaste@99"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "build": "npm run check-types && node esbuild.js",
+        "check-types": "tsc --noEmit",
+        "clean": "rm -rf dist *.tsbuildinfo",
+        "dev": "node esbuild.js --watch",
+        "package": "vsce package",
+        "publish": "vsce publish"
+    },
+    "devDependencies": {
+        "@types/node": "^20.19.33",
+        "@types/vscode": "^1.96.0",
+        "esbuild": "^0.27.3",
+        "typescript": "^5.7.3"
+    }
+}
