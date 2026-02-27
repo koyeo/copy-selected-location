@@ -3,7 +3,7 @@
     "publisher": "kozilla",
     "displayName": "Copy Selected Location",
     "description": "Right-click to copy file relative path and selected text",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "license": "MIT",
     "engines": {
         "vscode": "^1.96.0"
@@ -22,6 +22,10 @@
                 "title": "Copy Selected Location"
             },
             {
+                "command": "copySelectedLocation.copyLineLocation",
+                "title": "Copy Line Location"
+            },
+            {
                 "command": "copySelectedLocation.navigateToCode",
                 "title": "Navigate to Code Location"
             }
@@ -32,6 +36,10 @@
                     "command": "copySelectedLocation.copy",
                     "when": "editorHasSelection",
                     "group": "9_cutcopypaste@99"
+                },
+                {
+                    "command": "copySelectedLocation.copyLineLocation",
+                    "group": "9_cutcopypaste@98"
                 }
             ]
         }
